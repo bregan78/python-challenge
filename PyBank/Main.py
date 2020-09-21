@@ -14,7 +14,7 @@ maxprofit = 0
 maxdecrease = 0
 for i, row in results.iterrows():
     count = 1 + count
-    print(i, row)
+    #print(i, row)
     total = total + int(row[1])
     if count == 1:
         first_Month_PL = int(row[1])
