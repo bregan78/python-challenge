@@ -1,7 +1,10 @@
 import pandas as pd
+
 #from csv import reader
 
 f = open("C:\\BootCamp\\python-challenge\\PyBank\\Resources\\budget_data.csv","r")
+o = open('C:\\BootCamp\\python-challenge\\PyBank\\analysis\\PyBank_outfile','w') ## preparing text file for print
+
 #reader = csv.reader(f,delimiter = ",")
 total = 0
 results = pd.read_csv(f)
@@ -32,6 +35,19 @@ print(f"Total Months: {number_of_months}")
 print(f"Total: ${total}")
 #print(f"first month profit loses: {first_Month_PL}")
 #print(f"last month profit loses: {last_Month_PL}")
-print(f"The average change: {rounding_of_average_change}")
-print(f"Max profit date: {date_increase} and profit (${maxprofit})")
-print(f"Max decrease date: {date_decrease} and profit (${maxdecrease})")
+print(f"The average change: ${rounding_of_average_change}")
+print(f"Greatest Increase in Profits: {date_increase} and profit (${maxprofit})")
+print(f"Greatest Decrease in Profits: {date_decrease} and profit (${maxdecrease})")
+
+
+#### output file commands
+print("financial Analysis", file=o)
+print("---------------------------", file=o)
+print(f"Total Months: {number_of_months}", file=o)
+print(f"Total: ${total}", file=o)
+#print(f"first month profit loses: {first_Month_PL}")
+#print(f"last month profit loses: {last_Month_PL}")
+print(f"The average change: ${rounding_of_average_change}", file=o)
+print(f"Greatest Increase in Profits: {date_increase} and profit (${maxprofit})", file=o)
+print(f"Greatest Decrease in Profits: {date_decrease} and profit (${maxdecrease})", file=o)
+o.close()
