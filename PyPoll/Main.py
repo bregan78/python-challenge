@@ -4,7 +4,7 @@ import pandas as pd
 
 #f = open("C:\\BootCamp\\python-challenge\\PyPoll\\Resources\\election_data.csv","r")
 f = open("C:\\BootCamp\\python-challenge\\PyPoll\\Resources\\election_data.csv","r")
-o = open('C:\\BootCamp\\python-challenge\\PyPoll\\analysis\\PyPoll_outfile','w') ## preparing text file for print
+o = open('C:\\BootCamp\\python-challenge\\PyPoll\\analysis\\PyPoll_outfile.txt','w') ## preparing text file for print
 
 
 results = pd.read_csv(f)
