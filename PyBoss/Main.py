@@ -2,8 +2,11 @@ import pandas as pd
 import re
 import datetime as dt
 from us_state_abbrev import * 
+import csv
 
 f = open("C:\\BootCamp\\python-challenge\\PyBoss\\Resources\\employee_data.csv","r")
+o = csv.writer(open("C:\\BootCamp\\python-challenge\\PyBoss\\export\\new_employee_data.txt", 'w'))
+
 results = pd.read_csv(f)
 total_employees = len(results)
 
@@ -42,7 +45,7 @@ for i, row in results.iterrows():
 
 
             print(row)
-
+            o.writerow(row)
 
 
 
