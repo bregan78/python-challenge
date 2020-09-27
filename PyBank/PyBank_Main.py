@@ -3,14 +3,15 @@ import pandas as pd
 #from csv import reader
 #file_one = "budget_data.csv"
 
-f = open("C:\\BootCamp\\python-challenge\\PyBank\\Resources\\budget_data.csv","r")
-o = open('C:\\BootCamp\\python-challenge\\PyBank\\analysis\\PyBank_outfile.txt','w') ## preparing text file for print
+#f = open("C:\\BootCamp\\python-challenge\\PyBank\\Resources\\budget_data.csv","r")
+file1= ("Resources\\budget_data.csv")
+o = open('analysis\\PyBank_outfile.txt','w') ## preparing text file for print
 
 #df=pd.read_csv(file_one)
 
 #reader = csv.reader(f,delimiter = ",")
 total = 0
-results = pd.read_csv(f)
+results = pd.read_csv(file1)
 number_of_months = len(results)
 count = 0
 maxprofit = 0
